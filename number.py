@@ -9,7 +9,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return self.value
 
     def is_odd(self):
         """
@@ -18,7 +18,10 @@ class Number:
         returns: bool
 
         """
-        pass
+        if self.value%2==1:
+            return True
+        else:
+            return False
 
     def is_even(self):
         """
@@ -26,7 +29,10 @@ class Number:
 
         returns: bool
         """
-        pass
+        if self.value%2==0:
+            return True
+        else:
+            return False
 
     def is_prime(self):
         """
@@ -34,7 +40,20 @@ class Number:
 
         returns: bool
         """
-        pass
+        s = 2
+        a = self.value
+        for i in range(2,a):
+            if a%i==0:
+                s+=1
+            elif s>2:
+                break
+        if s==2:
+            return True
+        else:
+            return False
+            
+            
+                    
 
     def get_divisors(self):
         """
@@ -42,23 +61,33 @@ class Number:
 
         returns: list
         """
-        pass
-
+        s = []
+        a = self.value
+        for i in range(1,a+1):
+            if a%i==0:
+                s.append(i)
+        return s
     def get_length(self):
         """
         Returns the number of digits in the number.
 
         returns: int
         """
-        pass
-
+        a = []
+        for i in str(self.value):
+            if int(i) not in a:
+                a.append(i)
+        return len(a)
     def get_sum(self):
         """
         Returns the sum of all the digits in the number.
 
         returns: int
         """
-        pass
+        s = 0
+        for i in str(self.value):
+            s+=int(i)
+        return s
 
     def get_reverse(self):
         """
@@ -66,7 +95,14 @@ class Number:
 
         returns: int
         """
-        pass
+        c = 0
+        d = 1
+        a = self.value
+        while a>0:
+            b = a%10
+            a = (a-a%10)/10
+            c = (c+b)*10
+        return (c/10)
 
     def is_palindrome(self):
         """
@@ -135,3 +171,5 @@ class Number:
 
 # Create a new instance of Number
 number = Number(3)
+number = Number(455555555584)
+print(number.get_reverse())
