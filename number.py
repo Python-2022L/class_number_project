@@ -9,7 +9,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return self.value
 
     def is_odd(self):
         """
@@ -18,7 +18,10 @@ class Number:
         returns: bool
 
         """
-        pass
+        if self.value%2==1:
+            return True
+        if self.value%2==0:
+            return False
 
     def is_even(self):
         """
@@ -26,7 +29,10 @@ class Number:
 
         returns: bool
         """
-        pass
+        if self.value%2==0:
+            return True
+        if self.value%2==1:
+            return False
 
     def is_prime(self):
         """
@@ -50,7 +56,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return len(self.value)
 
     def get_sum(self):
         """
@@ -58,7 +64,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return sum(self.value)
 
     def get_reverse(self):
         """
@@ -90,7 +96,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return max(self.value)
 
     def get_min(self):
         """
@@ -98,7 +104,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return min(self.value)
 
     def get_average(self):
         """
